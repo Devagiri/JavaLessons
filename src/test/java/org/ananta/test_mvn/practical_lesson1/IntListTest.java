@@ -52,19 +52,7 @@ public class IntListTest {
 
     }
 
-    @Test
-    public void testRemove() throws Exception {
-    }
 
-
-
-    @Test
-    public void testPush() throws Exception {
-    }
-
-    @Test
-    public void testPeek() throws Exception {
-    }
 
     @Test
     public void testPop() throws Exception {
@@ -72,5 +60,52 @@ public class IntListTest {
 
         Assert.assertEquals(list.pop(), 5);
         Assert.assertEquals(list.size(), 4);
+    }
+
+
+
+
+    @Test
+    public void testRemove()  {
+    }
+
+
+
+    @Test
+    public void testPush() {
+    }
+
+    @Test
+    public void testPeek()  {
+    }
+
+
+
+    @Test
+    public void testAdd(){
+    }
+
+    @Test
+    public void testGet() {
+    }
+
+    @Test
+    public void testToString() {
+    }
+
+    @Test
+    public void testToArray(){
+    }
+
+    @Test
+    public void testFindIndexes()  {
+    }
+
+    @Test
+    public void testFindFirst() {
+    }
+
+    @Test
+    public void testFindLast() {
     }
 }
