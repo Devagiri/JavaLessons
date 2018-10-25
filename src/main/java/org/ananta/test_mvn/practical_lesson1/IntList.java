@@ -124,6 +124,22 @@ public class IntList {
         return result;
     }
 
+    /**
+     * Сравнение списков по значениям
+     * @param list
+     * @return
+     */
+    public boolean compare(IntList list){
+        if(size() != list.size()) return false;
+
+        for (int i=0; i< size(); i++){
+            if(get(i) != list.get(i)) return false;
+        }
+
+        return true;
+    }
+
+
     /**************************  Методы для домашней работы ***********************************/
 
     /**
@@ -132,7 +148,13 @@ public class IntList {
      */
     @Override
     public String toString(){
-        return "";
+        StringBuilder str= new StringBuilder("[");
+        for (int i=0; i<length;i++){
+            str.append(get(i));
+            if(i!=length-1) str.append(", ");
+        }
+        str.append("]");
+        return str.toString();
 
     }
 
