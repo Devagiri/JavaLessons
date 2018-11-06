@@ -5,25 +5,6 @@ import java.util.Scanner;
 
 public class ArrayLibrary {
 
-
-    public static int[] inputArray() {
-        int [] array;
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Введите количество элементов: ");
-        int count = scanner.nextInt();
-
-        array = new int[count];
-        System.out.println("Введите элементы: ");
-        for (int i=0; i < count; i++){
-            System.out.print("Значение "+i+" =");
-            array[i] = scanner.nextInt();
-
-        }
-        scanner.close();
-        return array;
-    }
-
     public static int[] randomInputArray(int size, int bound, long seed){
         Random random = new Random(seed);
         int array[] =new int[size];
@@ -41,8 +22,6 @@ public class ArrayLibrary {
         }
         return array;
     }
-
-
 
     public static void bubbleSort(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
