@@ -6,7 +6,8 @@ public class Tests {
 
     @Test
     public void myTest(){
-        ///Assert.assertEquals(1,1,"Что-то пошло не так");
+       System.out.printf("Результат равен %.2f %d %c %s", 1000.11111111, 22, 'p', "asdasdas" );
+       String f = String.format("Результат равен %.2f %d %c %s", 1000.11111111, 22, 'p', "asdasdas" );
 
 
     }

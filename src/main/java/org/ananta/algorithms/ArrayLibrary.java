@@ -1,22 +1,48 @@
 package org.ananta.algorithms;
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class ArrayLibrary {
-    public static void main(String[] args) {
 
-        int [] array = new int[]{3, 4, 10, 13, 3, 1, 0, -4, 0, 3, 28, 9};
 
-        System.out.println("Max = "+max(array));
+    public static int[] inputArray() {
+        int [] array;
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Min = "+min(array));
+        System.out.println("Введите количество элементов: ");
+        int count = scanner.nextInt();
 
-        printArray(find(array, 3));
+        array = new int[count];
+        System.out.println("Введите элементы: ");
+        for (int i=0; i < count; i++){
+            System.out.print("Значение "+i+" =");
+            array[i] = scanner.nextInt();
 
-        printArray(findBooleans(array, 3));
-
-        bubbleSort(array);
-        printArray(array);
-
+        }
+        scanner.close();
+        return array;
     }
+
+    public static int[] randomInputArray(int size, int bound, long seed){
+        Random random = new Random(seed);
+        int array[] =new int[size];
+        for (int i=0; i < size; i++){
+            array[i] = random.nextInt(bound);
+        }
+        return array;
+    }
+
+    public static int[] randomInputArray(int size, int bound){
+        Random random = new Random();
+        int array[] =new int[size];
+        for (int i=0; i < size; i++){
+            array[i] = random.nextInt(bound);
+        }
+        return array;
+    }
+
+
 
     public static void bubbleSort(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
@@ -81,7 +107,7 @@ public class ArrayLibrary {
     public static void printArray(int [] array){
         System.out.println("");
         for (int i = 0; i < array.length; i++){
-            System.out.print("\t"+array[i]+", ");
+            System.out.print(array[i]+", ");
         }
     }
 
