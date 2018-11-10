@@ -36,6 +36,31 @@ public class ArrayUtil {
         System.out.println("Медиана для 1000 элементов = " + getMedian(arr));
     }
 
+    /**
+     * Возвращает true, если массивы одинаковы по размеру и их члены соответсвенно равны
+     * Иначе возращает false
+     * @param source первый массив
+     * @param target второй массив
+     * @return булево занчение
+     */
+    public static boolean isEqual(int[] source, int[] target) {
+        boolean isEqual = true;
+
+        // сравниваем размеры массивов
+        if (source.length == target.length) {
+            for (int i = 0; i < source.length; i++) {
+                if (source[i] != target[i]) {
+                    isEqual = false;
+                    break;
+                }
+            }
+        } else {
+            isEqual = false;
+        }
+
+        return isEqual;
+    }
+
     public static int getAverage(int[] array) {
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
