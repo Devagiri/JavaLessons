@@ -7,11 +7,23 @@ public class Main {
         Paint extPaint = new ExtendedPaint();
 
 
+        Figure figure = new Figure() {
+
+            private int radius =1;
+            private Point center =new Point(1,2);
+
+            @Override
+            public void draw(Paint paint) {
+                System.out.print("аноним "+ radius+" в точке "+center+" , ");
+                paint.paintLine(center, center);
+            }
+        };
 
         Figure [] figures = new Figure[]{
                 new Kvadrat(new Point(1,2), 3),
                 new Circle(2, new Point(2,3)),
-                new Triangle(new Point(1,2),new Point(3,5),new Point(6,10))
+                new Triangle(new Point(1,2),new Point(3,5),new Point(6,10)),
+                figure
 
         };
 
@@ -25,6 +37,9 @@ public class Main {
             fig.draw(extPaint);
             fig.printHey();
         }
+
+
+
 
     }
 }

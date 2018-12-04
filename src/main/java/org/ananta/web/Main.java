@@ -1,9 +1,15 @@
 package org.ananta.web;
 
-import static spark.Spark.*;
+import spark.Request;
+import spark.Response;
+
 
 public class Main {
+
     public static void main(String[] args) {
-        get("/hello", (req, res) -> "Hello World");
+
+        spark.Spark.get("/", (Request req, Response res) -> "<html><head></head><body>привет<br><a href='/contacts'>Contacts</a></body></html>");
+        spark.Spark.get("/contacts", (Request req, Response res) -> "телефон: 5555555");
     }
+
 }
