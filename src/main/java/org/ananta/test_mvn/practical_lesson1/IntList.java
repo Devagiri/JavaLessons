@@ -1,7 +1,7 @@
 package org.ananta.test_mvn.practical_lesson1;
 
 
-public class IntList {
+public class IntList extends Object {
 
     private final static int DEFAULT_SIZE = 10;
     private int [] values;
@@ -74,7 +74,7 @@ public class IntList {
     }
 
     public void addAll(int [] elements){
-        if( values.length - length >= elements.length) {
+        if( values.length - length < elements.length) {
             resizeArray(elements.length < DEFAULT_SIZE ? DEFAULT_SIZE : (elements.length + DEFAULT_SIZE));
         }
 
@@ -218,7 +218,7 @@ public class IntList {
      * @return индекс найденного элемента
      */
     public int findFirst(int value){
-        //делается тоже что и в findIndexes, но при первом нахождении совпадения элемента сразу возвращаем из метода его индекс
+        //делается тоже что и в findAll, но при первом нахождении совпадения элемента сразу возвращаем из метода его индекс
         return 0;
     }
 
